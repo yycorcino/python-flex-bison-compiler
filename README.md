@@ -11,11 +11,13 @@
 </div>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-A mini compiler demonstrating the use of data types within Flex and Bison. In the case of Python, the print statement is able to take in multiple data types such as integers and string. The developer in Python would simply call `print(<value>)`, however inside the compiler it requires complex design to determine the value type then it can print to the console.
+A mini compiler demonstrating the use of data types utilizing Flex and Bison. In the case of Python, the print statement is able to take in multiple data types such as integers and string. The developer in Python would simply call `print(<value>)`, however inside the compiler it requires complex design to determine the value type then it can print to the console.
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 Installing and configuring Flex and Bison using Docker.
@@ -24,7 +26,7 @@ Installing and configuring Flex and Bison using Docker.
 
 _Have Docker pre-installed into your operating system._
 
-* Using [CLI Command](https://docs.docker.com/engine/install/ubuntu/) for Ubuntu
+- Using [CLI Command](https://docs.docker.com/engine/install/ubuntu/) for Ubuntu
   ```
   sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
   ```
@@ -38,33 +40,42 @@ _Below is an example of how you download this project and start using Docker._
    git clone <repo_url>
    ```
 2. Go into the Project Repository
-    ```
-    cd /path/to/repository 
-    ```
+   ```
+   cd /path/to/repository
+   ```
 3. Build Image
-    ```
-    sudo docker build -t compiler-image .
-    ```
+   ```
+   sudo docker build -t compiler-image .
+   ```
 4. Run Container
-    ```
-    sudo docker run -it compiler-image
-    ```
+   ```
+   sudo docker run -it compiler-image
+   ```
 5. Run Test inside Container
-    ```
-    $ make
-    $ ./compiler <source_file>
+   ```
+   $ make
+   $ ./compiler <source_file>
    ```
 
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
-Using the pre-defined Python file to test arithmetic operations and printing of strings.
+_Using the pre-defined Python file to test arithmetic operations and printing of strings._
 
 ```
-./compiler __test__/arithmetic.py
+$ make
+$ ./compiler __test__/arithmetic.py
+```
+
+_Remove all generated files._
+
+```
+make clean
 ```
 
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
